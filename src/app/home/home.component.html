@@ -1,0 +1,13 @@
+<app-navbar *ngIf="location"></app-navbar>
+  <div class="row h-100">
+    
+    <div class="col-md-3" *ngIf="location">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div [ngClass]="{'col-md-9':location,'col-md-12':!location}">
+        <app-container></app-container>
+    </div>
+
+  </div>
+
